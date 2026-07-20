@@ -48,3 +48,17 @@ jobs:
         with:
           name: Kavosh-Cloudflare-Scanner-Android
           path: src-tauri/gen/android/app/build/outputs/apk/universal/release/*.apk
+          - name: Build Android APK
+                  run: npm run tauri android build
+
+                # مرحله جدید: امضا کردن اتوماتیک فایل APK برای نصب بدون ارور
+                - name: Sign APK
+                  uses: rxdew/sign-apk-action@v1
+                  with:
+                    apkPath: src-tauri/gen/android/app/build/outputs/apk/universal/release/*.apk
+
+                - name: Upload APK Artifact
+                  uses: actions/upload-artifact@v4
+                  with:
+                    name: Kavosh-Cloudflare-Scanner-Android
+                    path: src-tauri/gen/android/app/build/outputs/apk/universal/release/*-signed.apk
