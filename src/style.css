@@ -1,0 +1,87 @@
+@import url('https://cdn.jsdelivr.net/npm/vazirmatn@33.0.0/Vazirmatn-font-face.css');
+
+/* Import Tailwind 4 core */
+@import "tailwindcss";
+
+/* Enable DaisyUI plugin */
+@plugin "daisyui";
+
+/* Native system font settings */
+@theme {
+  --font-sans: 'Vazirmatn', sans-serif;
+}
+
+/* ======================================================= */
+/* Dark theme color palette settings (Default Dark)        */
+/* ======================================================= */
+:root, [data-theme="dark"] {
+  /* Change TXT download button color to Sky Blue */
+  --s: #0ea5e9;
+  --sc: #ffffff;
+
+  --b1: #0f172a;
+  --b2: #1e293b;
+  --b3: #020617;
+  --bc: #f8fafc;
+}
+
+/* ======================================================= */
+/* Light theme settings with high contrast and separation  */
+/* ======================================================= */
+[data-theme="light"] {
+  --b1: #f1f5f9;
+  --b2: #ffffff;
+  --b3: #e2e8f0;
+  --bc: #0f172a;
+
+  --p: #2563eb;
+  /* TXT download button in light theme (Ocean blue) */
+  --s: #0284c7;
+  --n: #cbd5e1;
+  --nc: #0f172a;
+}
+
+/* Custom style for minimize button (soft amber highlight on hover) */
+.minimize-btn:hover {
+  background-color: rgba(245, 158, 11, 0.15) !important;
+  color: #f59e0b !important;
+}
+
+/* Deep shadow and distinct border for cards in light theme */
+[data-theme="light"] .card {
+  box-shadow: 0 4px 6px -1px rgba(15, 23, 42, 0.05), 0 2px 4px -2px rgba(15, 23, 42, 0.05) !important;
+  border: 1px solid rgba(15, 23, 42, 0.08) !important;
+}
+
+/* ======================================================= */
+/* Structural fixes and form alignments                    */
+/* ======================================================= */
+
+input, select, button, textarea {
+    font-family: 'Vazirmatn', sans-serif !important;
+}
+
+.btn, .input, .select {
+    min-height: 2.8rem !important;
+    height: 2.8rem !important;
+    line-height: normal !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+/* Hide increment/decrement arrows in number inputs */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+/* Align headings and text inside tables for RTL direction */
+[dir="rtl"] table th,
+[dir="rtl"] table td {
+  text-align: right;
+}
