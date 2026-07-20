@@ -43,22 +43,16 @@ jobs:
       - name: Build Android APK
         run: npm run tauri android build
 
+      # ساخت کلید امضا و امضا کردن فایل APK با ابزارهای رسمی گوگل
+      - name: Sign APK
+        run: |
+          keytool -genkey -v -keystore debug.keystore -storepass android -alias androiddebugkey -keypass android -keyalg RSA -keysize 2048 -validity 10000 -dname "CN=Android Debug,O=Android,C=US"
+          BUILD_TOOLS_DIR=$(ls -d $ANDROID_HOME/build-tools/* | tail -n 1)
+          APK_PATH=$(find src-tauri/gen/android/app/build/outputs/apk/ -name "*.apk" | head -n 1)
+          $BUILD_TOOLS_DIR/apksigner sign --ks debug.keystore --ks-pass pass:android --key-pass pass:android $APK_PATH
+
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
         with:
           name: Kavosh-Cloudflare-Scanner-Android
           path: src-tauri/gen/android/app/build/outputs/apk/universal/release/*.apk
-      - name: Build Android APK
-        run: npm run tauri android build
-
-                # مرحله جدید: امضا کردن اتوماتیک فایل APK برای نصب بدون ارور
-      - name: Sign APK
-        uses: rxdew/sign-apk-action@v1
-        with:
-          apkPath: src-tauri/gen/android/app/build/outputs/apk/universal/release/*.apk
-
-      - name: Upload APK Artifact
-        uses: actions/upload-artifact@v4
-        with:
-          name: Kavosh-Cloudflare-Scanner-Android
-          path: src-tauri/gen/android/app/build/outputs/apk/universal/release/*-signed.apk
