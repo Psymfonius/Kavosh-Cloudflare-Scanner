@@ -97,5 +97,5 @@ Make sure you have Node.js and the Rust compiler toolchain installed on your mac
 
 ## 📄 License / پروانه
 
-This project is open-source software licensed under the **GNU General Public License v3.0 (GPL-3.0)**[cite: 1].  
-این پروژه یک نرم‌افزار متن‌باز است که تحت پروانه **GPL-3.0** منتشر شده است[cite: 1].
+This project is open-source software licensed under the **GNU General Public License v3.0 (GPL-3.0)**.  
+این پروژه یک نرم‌افزار متن‌باز است که تحت پروانه **GPL-3.0** منتشر شده است
