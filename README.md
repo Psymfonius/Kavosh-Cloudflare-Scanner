@@ -1,17 +1,23 @@
 # Kavosh Cloudflare IP Scanner 🚀
 
-A premium, blazingly fast, and lightweight native desktop application built with **Tauri**, **Rust**, and **Vue.js 3** to scan, test, and find the cleanest and lowest-latency Cloudflare IP addresses and ports.
+[English](#english) | [فارسی](#فارسی)
 
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](https://opensource.org/licenses/MIT)
+[![License: GPL v3](https://img.shields.io/badge/License-GPL--3.0-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)
 [![Rust](https://img.shields.io/badge/rust-2021-orange.svg)](https://www.rust-lang.org/)
 [![Vue](https://img.shields.io/badge/vue-3.x-green.svg)](https://vuejs.org/)
-[![Tailwind](https://img.shields.io/badge/tailwind-4.0-blueviolet.svg)](https://tailwindcss.com/)
+[![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20Android-brightgreen.svg)]()
 
 ---
 
-## ✨ Features
+<a name="english"></a>
+## 🌐 English
+
+A premium, blazingly fast, and lightweight cross-platform native application built with **Tauri**, **Rust**, and **Vue.js 3** to scan, test, and find the cleanest and lowest-latency Cloudflare IP addresses and ports.
+
+### ✨ Features
 
 - **Blazingly Fast Performance:** Asynchronous multi-threaded TCP network scanning powered by Rust background workers. No UI freezing or hanging.
+- **Cross-Platform Support:** Native binary support for **Windows** (Desktop) and **Android** (Mobile).
 - **Premium User Interface:** Modern dashboard stylized with Tailwind CSS and DaisyUI, featuring native custom frameless window dragging/controls.
 - **Bi-directional Bilingual Support:** Full localization supporting English (LTR) and Persian (RTL) out of the box.
 - **Smooth Visual Transitions:** Completely fluent fade in/out transitions during language toggles and theme switches (Dark / Light modes).
@@ -19,23 +25,19 @@ A premium, blazingly fast, and lightweight native desktop application built with
 - **Granular Advanced Filters:** Custom settings for test counts, thread concurrency limits, maximum pings, and specific HTTPS port filters (443, 2053, 2083, etc.).
 - **Professional Exporters:** Export results directly with native OS dialogs into clipboard, `.txt` raw format, or structured Excel-friendly `.csv` files.
 
----
-
-## 🛠️ Tech Stack
+### 🛠️ Tech Stack
 
 - **Backend / Core Engine:** Rust (Tauri Core)
 - **Frontend / Interface:** Vue.js 3 (TypeScript), Vite
-- **Styling & Theme:** Tailwind CSS v4, DaisyUI
+- **Styling & Theme:** Tailwind CSS, DaisyUI
 - **Fonts:** Vazirmatn (Optimized typography for Persian layouts)
 
----
+### 💻 Getting Started (Development & Build)
 
-## 💻 Getting Started (Development & Build)
-
-### Prerequisites
+#### Prerequisites
 Make sure you have Node.js and the Rust compiler toolchain installed on your machine.
 
 1. **Clone the Repository:**
    ```bash
-   git clone [https://github.com/Psymfonius/kavosh-cloudflare-scanner.git](https://github.com/Psymfonius/kavosh-cloudflare-scanner.git)
-   cd kavosh-cloudflare-scanner
+   git clone [https://github.com/Psymfonius/Kavosh-Cloudflare-Scanner.git](https://github.com/Psymfonius/Kavosh-Cloudflare-Scanner.git)
+   cd Kavosh-Cloudflare-Scanner
